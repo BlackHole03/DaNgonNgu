@@ -19,7 +19,19 @@ class Localization
         $language = Session::get('language', config('app.locale'));
         switch ($language) {
             case 'en':
-            $language = 'en';
+                $language = 'en';
+                break;
+
+            case 'japan':
+                $language = 'japan';
+            break;
+
+            case 'lao':
+                $language = 'lao';
+            break;
+
+            case 'russian':
+                $language = 'russian';
             break;
             
             default:

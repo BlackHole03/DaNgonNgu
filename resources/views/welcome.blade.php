@@ -46,6 +46,7 @@
 
             .title {
                 font-size: 84px;
+                margin-bottom: 20px;
             }
 
             .links > a {
@@ -60,6 +61,16 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+            a {
+                transition: transform .2s;
+            }
+            a:hover {
+                color: blue;
+                background:lighten(#2ECCFA, 20%);
+                margin:6px;
+                padding:18px 32px;
+                -webkit-transition: all 100ms ease;
             }
         </style>
     </head>
@@ -80,21 +91,17 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md mb-3">
                     <!-- Laravel -->
                     {{ __("Welcome to my website!") }}
                 </div>
 
                 <div class="links">
-                    <a href="{!! route('change-language', ['en']) !!}">English</a>
-                    <a href="{!! route('change-language', ['vi']) !!}">Vietnam</a>
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{!! route('change-language', ['en']) !!}" data-toggle="tooltip" data-placement="bottom" title="{{__('english')}}">{{__('english')}}</a>
+                    <a href="{!! route('change-language', ['vi']) !!}" data-toggle="tooltip" data-placement="bottom" title="{{__('vietnam')}}">{{__('vietnam')}}</a>
+                    <a href="{!! route('change-language', ['japan']) !!}" data-toggle="tooltip" data-placement="bottom" title="{{__('japan')}}">{{__('japan')}}</a>
+                    <a href="{!! route('change-language', ['lao']) !!}" data-toggle="tooltip" data-placement="bottom" title="{{__('lao')}}">{{__('lao')}}</a>
+                    <a href="{!! route('change-language', ['russian']) !!}" data-toggle="tooltip" data-placement="bottom" title="{{__('russian')}}">{{__('russian')}}</a>
                 </div>
             </div>
         </div>

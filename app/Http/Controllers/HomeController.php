@@ -15,9 +15,23 @@ class HomeController extends Controller
 		if ($lang == 'en') {
 			$language = 'en';
 		}
+
 		if ($lang == 'vi') {
 			$language = 'vi';
 		}
+
+		if ($lang == 'japan') {
+			$language = 'japan';
+		}
+
+		if ($lang == 'lao') {
+			$language = 'lao';
+		}
+
+		if ($lang == 'russian') {
+			$language = 'russian';
+		}
+
 		Session::put('language', $language);
 		return redirect()->back();
 	}
